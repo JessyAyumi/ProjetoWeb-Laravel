@@ -1,7 +1,7 @@
 body {
     margin: 0 auto;
     width: 100%;
-    background: url(cloud-bar.png) repeat-x #fff;
+    background: url(img/cloud-bar.png) repeat-x #fff;
     padding-top: 10px;
 }
 
@@ -113,6 +113,19 @@ body {
     color: white;
     display: none;
     vertical-align: middle;
+}
+
+.quadrado{
+            background-color: white;
+            font-family: arial black;
+            padding: 20px 10 px 10 px 10 px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+            height: 200px;
+            width: 900px;
+            border: 2px solid #C0C7C4;
+        
+
 }
 
 .subtitulo{
