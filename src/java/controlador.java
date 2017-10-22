@@ -24,7 +24,7 @@ public class controlador extends HttpServlet {
         writer.println("     <link href=\"https://fonts.googleapis.com/css?family=Miriam+Libre\" rel=\"stylesheet\">  ");
         writer.println("     <link href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:200\" rel=\"stylesheet\">");
         writer.println("    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">   ");
-        writer.println("    <link rel=\"stylesheet\" href=\"style.css\"> ");
+        writer.println("    <link rel=\"stylesheet\" type = \"text/css\" href=\"style.css\"> ");
         writer.println("</head>   ");
         writer.println("<body>   ");
         writer.println("    <div class=\"nav\">   ");

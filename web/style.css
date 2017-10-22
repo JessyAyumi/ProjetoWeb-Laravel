@@ -1,0 +1,183 @@
+body {
+    margin: 0 auto;
+    width: 100%;
+    background: url(cloud-bar.png) repeat-x #fff;
+    padding-top: 10px;
+}
+
+    ::-webkit-input-placeholder {
+    width: 100%;
+    font-family: 'Miriam Libre';
+    font-size: 12px;
+}
+
+.nav {
+    border: 1px solid #dee0df;
+    display: flex;
+    height: 79px;
+    max-width: 100%;
+}
+
+.logo {
+    padding-left: 15px;
+    height: 32px;
+    width: 48px;
+    margin-right: 10px;
+    margin-top: 20px;
+    line-height: 80px;
+}
+
+.div-middle-menu,
+.div-right-menu {
+    border-left: 1px solid #CCC;
+    width: 32%;
+    padding: 0 15px 0 15px;
+}
+
+.div-right-align {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+
+.div-right-menu>a,
+.dropdown {
+    color: #525252;
+    display: block;
+    font-size: 14px;
+    padding: 4% 2%;
+    font-family: 'Miriam Libre', sans-serif;
+    float: left;
+}
+
+.div-right-menu>a:hover,
+.div-right-menu>div:hover {
+    color: #e74430;
+}
+
+.search-img {
+    width: 16px;
+    height: 14.69px;
+    margin-top: 30px;
+    padding-right: 25px;
+    float: left;
+    display: none;
+}
+
+.img-cloud {
+    display: flex;
+    height: 10px;
+    max-width: 100%;
+    /* max-width: calc(100% - 90px); */
+}
+
+.macbook {
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    max-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 3px 20px;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    font-weight: 400;
+    color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    margin-top: 2.5%;
+    display: block;
+}
+
+.search-input{
+    border:none;
+    outline: none;
+    width: 80%;
+    float:left;
+    height: 100%;
+}
+
+.hamburguer {
+    border: none;
+    border-radius: 3px;
+    background: #f4645f;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    display: none;
+    vertical-align: middle;
+}
+
+.subtitulo{
+    font-size: 21px;
+    letter-spacing: -.02em;
+    text-align: center;
+    font-weight: 200;
+    font-family: 'Miriam Libre','Source Sans Pro',sans-serif;    color: #aeaeae;
+    -webkit-font-smoothing: antialiased;
+}
+
+.div-hamburguer {
+    padding: 0 15px;
+    -webkit-box-align: center;
+    align-items: center;
+    display: none;
+    width: 10%;
+}
+
+.div-logo {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa {
+    display: inline;
+}
+
+@media screen and (max-width: 960px) {
+    .div-right-menu,
+    .macbook,
+    #laravel {
+        display: none;
+    }
+
+    .logo {
+        padding: 0 15px 0 15px;
+    }
+
+    .div-middle-menu {
+        width: 100%;
+    }
+
+    .hamburguer {
+        display: flex;
+    }
+
+    .div-hamburguer {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .search-input{
+        width: 90% !important;
+    }
+}
+
+@media screen and (min-width:659px) {
+    .search-img {
+        display: block !important;
+    }
+    
+    .search-input{
+        width: 80%;
+    }
+    
+}
