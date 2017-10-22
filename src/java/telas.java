@@ -15,8 +15,7 @@ import java.io.IOException;
 public class telas {
     
      public static void main(String[] args) throws IOException {
-         java.awt.Desktop.getDesktop().open( new File( "index.html" ) );
-          Runtime.getRuntime().exec("start  C:/Users/Regina Sobral/Documents/GitHub/ProjetoWeb-Laravel/index.html");     
+           
     }
    
 }
