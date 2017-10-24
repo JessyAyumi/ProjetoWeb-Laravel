@@ -231,3 +231,16 @@ body {
     }
     
 }
+.quadrado{
+            background-color: white;
+            margin-top: 30px;
+            font-family: arial black;
+            padding: 20px 10px 10px 10px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+            height: 200px;
+            width: 900px;
+            border: 2px solid #C0C7C4;
+        
+
+}
