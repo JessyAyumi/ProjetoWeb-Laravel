@@ -32,7 +32,7 @@ public class login extends HttpServlet {
             }
 
             String userName = new String("");
-            String passwrd = new String("");
+            String password = new String("");
 
             try {
                 out.println("<!DOCTYPE HTML>");
@@ -49,26 +49,26 @@ public class login extends HttpServlet {
                 ConectDB db = new ConectDB();
                 con = db.getConnection();
 
-                Statement s = con.createStatement();
-                String sql_str = "SELECT email, senha, nome, id FROM usuario";
-                ResultSet rs = s.executeQuery(sql_str);
-//É aqui 
+                String email = request.getParameter("email");
+                String sql = "SELECT email, senha, nome, id FROM usuario where email = ?";
+                PreparedStatement st = con.prepareStatement(sql);
+                st.setString(1, email);
+                ResultSet rs = st.executeQuery();
                 while (rs.next()) {
                     userName = rs.getString("email");
-                    passwrd = rs.getString("senha");
-                    if (userName.equals(request.getParameter("email")) && (passwrd.equals(request.getParameter("senha").toString()))) {
+                    password = rs.getString("senha");
+                    System.out.println(request.getParameter("senha"));
+                    System.out.println(password);
+                    if (userName.equals(request.getParameter("email")) && (password.equals(request.getParameter("senha")))) {
                         System.out.println("ENTROU");
                         request.getSession().setAttribute("logado", new Boolean(true));
                         request.getSession().setAttribute("nome", rs.getString("nome"));
                         request.getSession().setAttribute("id", rs.getInt("id"));
                         response.sendRedirect("controlador");
-                        System.out.println("ENTROU CARAIOOOOO");
                     }
-//Até aqui ( o resto em tese está certo)
                 }
                 rs.close();
-                s.close();
-                String email = request.getParameter("email");
+                st.close();
                 if (email != null) {
                     out.println("<h1><br><center>Usuário ou senha incorreto</center></h1>");
                 } else {
@@ -78,8 +78,8 @@ public class login extends HttpServlet {
                 out.println("<div class=\"conteudo\">");
                 out.println("<div class=\"card\">");
                 out.println("<form method=\"post\" action=\"login\" charset=\"utf-8\">");
-                out.println("<input type=\"email\" id=\"email\" name=\"email\" class=\"email\" value=\"" + email + "\"  placeholder=\" Seu e-mail: exemplo@gmail.com\" style=\"outline: none;\" required name=email; aria-label=\"Pesquisar no Google+\" size=\"25\" pattern=\"[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$\" ></input>");
-                out.println("<input type=\"password\" id=\"senha\" name=\"senha\" class=\"email\" value=\"\"  placeholder=\" Insira sua senha\" required name=password style=\"outline: none;\" aria-label=\"Pesquisar no Google+\" charset=\"utf-8\" size=\"25\" ></input>");
+                out.println("<input type=\"email\" id=\"email\" name=\"email\" class=\"email\" value=\"" + email + "\"  placeholder=\" Seu e-mail: exemplo@gmail.com\" style=\"outline: none;\" required name=email; size=\"25\" pattern=\"[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$\" ></input>");
+                out.println("<input type=\"password\" id=\"senha\" name=\"senha\" class=\"email\" value=\"\"  placeholder=\" Insira sua senha\" required name=password style=\"outline: none;\" charset=\"utf-8\" size=\"25\" ></input>");
                 out.println("<center> <input type=\"submit\" style=\"width:100%;height:auto;\" class=\"botao01\" value=\"Login\"  placeholder=\" \" style=\"outline: none;\" charset=\"utf-8\" ></input></center>");
                 out.println("</form>");
                 out.println("</div>");
