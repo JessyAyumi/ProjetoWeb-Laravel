@@ -51,6 +51,18 @@ body {
     font-family: 'Miriam Libre', sans-serif;
     float: left;
 }
+.alinhamento {
+    margin-top: 15px;
+    align-content: center;
+    font-family: 'Miriam Libre', arial;
+    color: black;
+    background-color: #C0C7C4; 
+    border: 2px solid #525252;
+    margin-right: 30px;
+    height: 20px;
+    width: 55px;
+    text-decoration: none;
+}
 
 .div-right-menu>a:hover,
 .div-right-menu>div:hover {
@@ -93,6 +105,11 @@ body {
 .dropdown:hover .dropdown-content {
     margin-top: 2.5%;
     display: block;
+}
+
+.cadastro{
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .search-input{
@@ -168,11 +185,32 @@ body {
 .conteudo {
     width: 100%;
     height: 325px;
-    position: absolute;
+   
 }
 
 .card {
     height: 250px;
+    margin-bottom: 0;
+    width: 20%;
+    padding: 40px 40px;
+    background-color: #f7f7f7;
+    border-radius: 2px;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #404040;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px;
+    border-bottom: 3px;
+    border-bottom-color: darkgray;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+}
+
+.card2 {
+    height: 900px;
     margin-bottom: 0;
     width: 20%;
     padding: 40px 40px;
@@ -240,7 +278,6 @@ body {
             margin-bottom: 20px;
             height: 200px;
             width: 900px;
-            border: 2px solid #C0C7C4;
-        
-
+            border: 2px solid #C0C7C4;   
 }
+
