@@ -5,10 +5,24 @@ body {
     padding-top: 10px;
 }
 
-    ::-webkit-input-placeholder {
+::-webkit-input-placeholder {
     width: 100%;
     font-family: 'Miriam Libre';
     font-size: 12px;
+}
+.postagens{
+    font-family: arial;
+    
+}
+
+separador {
+    margin-top: 15px;
+    margin-left: 12px;
+    margin-right: 12px;
+    border: 3px;
+    height: 2px;  
+    background-color:#000; 
+    margin-bottom: 0px;
 }
 
 .nav {
@@ -90,7 +104,7 @@ body {
 }
 
 .wrapper {
-    
+
     min-height: 100%;
     display: block;
     max-width: 100%;
@@ -100,11 +114,11 @@ body {
 }
 
 .overflowHidden {
-                overflow: hidden;
-                display: inline-block;
-                width: 100%; 
-                height: 95%; 
-            }
+    overflow: hidden;
+    display: inline-block;
+    width: 100%; 
+    height: 95%; 
+}
 
 .dropdown-content {
     display: none;
@@ -149,19 +163,6 @@ body {
     vertical-align: middle;
 }
 
-.quadrado{
-            background-color: white;
-            font-family: arial black;
-            padding: 20px 10 px 10 px 10 px;
-            margin-top: 25px;
-            margin-bottom: 20px;
-            height: 200px;
-            width: 900px;
-            border: 2px solid #C0C7C4;
-        
-
-}
-
 .subtitulo{
     font-size: 21px;
     letter-spacing: -.02em;
@@ -190,7 +191,7 @@ body {
 }
 
 .wrapper {
-    
+
     min-height: 100%;
     display: block;
     max-width: 100%;
@@ -202,7 +203,7 @@ body {
 .conteudo {
     width: 100%;
     height: 325px;
-   
+
 }
 
 .card {
@@ -270,7 +271,7 @@ body {
         display: flex;
         justify-content: flex-end;
     }
-    
+
     .search-input{
         width: 90% !important;
     }
@@ -280,21 +281,19 @@ body {
     .search-img {
         display: block !important;
     }
-    
+
     .search-input{
         width: 80%;
     }
-    
+
 }
 .quadrado{
-            background-color: white;
-            margin-top: 30px;
-            font-family: arial black;
-            padding: 20px 10px 10px 10px;
-            margin-top: 25px;
-            margin-bottom: 20px;
-            height: 200px;
-            width: 900px;
-            border: 2px solid #C0C7C4;   
+    font-family: arial black;
+    padding: 20px 10px 10px 10px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    height: 200px;
+    width: 900px;
+    border: 2px solid #C0C7C4;   
 }
 
