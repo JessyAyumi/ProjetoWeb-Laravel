@@ -1,7 +1,6 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,12 +11,19 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class Controlador
  */
-@WebServlet(urlPatterns ={"/Controlador"})
+@WebServlet(urlPatterns = {"/controlador"})
 public class controlador extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
         PrintWriter writer = response.getWriter();
+
+        HttpSession session = request.getSession();
+        if ((session.getAttribute("logado")) == null) {
+            response.sendRedirect("login");
+        }
+
         writer.println(" <!DOCTYPE html>  ");
         writer.println("  <html> ");
         writer.println("  <head> ");
@@ -41,7 +47,7 @@ public class controlador extends HttpServlet {
         writer.println("            <a>Laracasts</a>   ");
         writer.println("            <a>News</a>   ");
         writer.println("            <a>Partners</a>   ");
-        writer.println("            <a>Forge</a>   ");
+        writer.println("            <a href=\"logout\">Sair</a>   ");
         writer.println("            <div class=\"dropdown\">   ");
         writer.println("                <span>EcoSystem</span><span class=\"fa fa-caret-down\" style=\"padding-left: 7%;font-size: 12px\"></span>   ");
         writer.println("                <div class=\"dropdown-content\">   ");
@@ -68,24 +74,24 @@ public class controlador extends HttpServlet {
         writer.println("        <h3 class=\"subtitulo\">The PHP Framework For Web Artisans</h3>   ");
         writer.println("    </div>   ");
         writer.println("    <div class=\"macbook\" align=\"center\">   ");
-        writer.println("        <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:a=\"http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/\"\n" +
-"            x=\"0px\" y=\"0px\" width=\"955px\" height=\"425px\" viewBox=\"0 0 694.1 384\" enable-background=\"new 0 0 694.1 384\" xml:space=\"preserve\">   ");
+        writer.println("        <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:a=\"http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/\"\n"
+                + "            x=\"0px\" y=\"0px\" width=\"955px\" height=\"425px\" viewBox=\"0 0 694.1 384\" enable-background=\"new 0 0 694.1 384\" xml:space=\"preserve\">   ");
         writer.println("            <defs>   ");
         writer.println("            </defs>   ");
         writer.println("            <g id=\"macbook\" transform=\"translate(1.000000, 1.000000)\" sketch:type=\"MSLayerGroup\">   ");
-        writer.println("                <path id=\"body-top\" sketch:type=\"MSShapeGroup\" fill=\"#FEFEFE\" stroke=\"#8492A5\" stroke-width=\"2\" d=\"M594,0H98\n" +
-"                    C84.5,0,73,11.1,73,24.8V351h546V24.8C619,11.1,607.5,0,594,0z\"></path>   ");
-        writer.println("                <circle id=\"webcam\" sketch:type=\"MSShapeGroup\" fill=\"none\" stroke=\"#8492A5\" stroke-width=\"2\" cx=\"347\" cy=\"19\" r=\"4\">\n" +
-"                </circle>   ");
+        writer.println("                <path id=\"body-top\" sketch:type=\"MSShapeGroup\" fill=\"#FEFEFE\" stroke=\"#8492A5\" stroke-width=\"2\" d=\"M594,0H98\n"
+                + "                    C84.5,0,73,11.1,73,24.8V351h546V24.8C619,11.1,607.5,0,594,0z\"></path>   ");
+        writer.println("                <circle id=\"webcam\" sketch:type=\"MSShapeGroup\" fill=\"none\" stroke=\"#8492A5\" stroke-width=\"2\" cx=\"347\" cy=\"19\" r=\"4\">\n"
+                + "                </circle>   ");
         writer.println("                <g id=\"body-bottom-group\" transform=\"translate(0.000000, 351.000000)\" sketch:type=\"MSShapeGroup\">   ");
-        writer.println("                    <path id=\"body-bottom\" fill=\"#FDFDFD\" stroke=\"#8492A5\" stroke-width=\"2\" d=\"M640.8,31H51.3C20.6,31,0,20.5,0,16V2.4C0,1.1,1.3,0,3,0\n" +
-"                        h686.1c1.7,0,3,1.1,3,2.4v14.1C692.1,20.1,676.1,31,640.8,31z\"></path>   ");
+        writer.println("                    <path id=\"body-bottom\" fill=\"#FDFDFD\" stroke=\"#8492A5\" stroke-width=\"2\" d=\"M640.8,31H51.3C20.6,31,0,20.5,0,16V2.4C0,1.1,1.3,0,3,0\n"
+                + "                        h686.1c1.7,0,3,1.1,3,2.4v14.1C692.1,20.1,676.1,31,640.8,31z\"></path>   ");
         writer.println("                    <path id=\"bottom-seam\" fill=\"none\" stroke=\"#8492A5\" stroke-linecap=\"square\" d=\"M0.5,14.5h689.7\"></path>   ");
         writer.println("                </g>   ");
         writer.println("                <rect id=\"screen\" x=\"95\" y=\"39\" sketch:type=\"MSShapeGroup\" fill=\"#FFFFFF\" stroke=\"#8492A5\" width=\"501.1\" height=\"292\">   ");
         writer.println("                </rect>   ");
-        writer.println("                <path id=\"touchpad\" sketch:type=\"MSShapeGroup\" fill=\"#FFFFFF\" stroke=\"#8492A5\" d=\"M421,352v3.1c0,2.2-4.3,2.9-7.6,2.9H278.8\n" +
-"                    c-3.5,0-7.8-0.7-7.8-2.9V352\"></path>   ");
+        writer.println("                <path id=\"touchpad\" sketch:type=\"MSShapeGroup\" fill=\"#FFFFFF\" stroke=\"#8492A5\" d=\"M421,352v3.1c0,2.2-4.3,2.9-7.6,2.9H278.8\n"
+                + "                    c-3.5,0-7.8-0.7-7.8-2.9V352\"></path>   ");
         writer.println("            </g>   ");
         writer.println("        </svg>   ");
         writer.println("    </div>   ");
@@ -102,52 +108,6 @@ public class controlador extends HttpServlet {
         writer.println("   ");
         writer.println("   ");
         writer.println("   ");
-        
-        
-        
-        
-        
-        
-        
-        
-    }
-    
-    private static final long oi = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public controlador() {
-        
-        super();
-        
-    }
-
-    
-
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-        String login = request.getParameter("login");
-        String senha = request.getParameter("senha");
-        // Login e senha corretos
-
-          if (autenticar(login, senha)) {
-           HttpSession sessao = request.getSession();
-           sessao.setAttribute(login, senha);
-
-           
-         } else {
-             request.getRequestDispatcher("Tela3.jsp").forward(request, response);
-               }
-
-
-    }
-
-    private boolean autenticar(String login, String senha) {
-        // TODO Auto-generated method stub
-        return true;
     }
 }
-
