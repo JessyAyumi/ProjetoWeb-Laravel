@@ -88,8 +88,7 @@ public class conteudo extends HttpServlet {
                 PreparedStatement ps = null;
                 ps = con.prepareStatement(
                         "INSERT INTO CONTEUDO(id_usuario,descricao) VALUES (?,?)");
-                out.println("to aqui");
-                
+                               
                 ps.setInt(1, id_usuario);
                 ps.setString(2, descricao);
                 ps.executeUpdate();
