@@ -89,6 +89,23 @@ body {
     align-items: center;
 }
 
+.wrapper {
+    
+    min-height: 100%;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #e5e5e5;
+}
+
+.overflowHidden {
+                overflow: hidden;
+                display: inline-block;
+                width: 100%; 
+                height: 95%; 
+            }
+
 .dropdown-content {
     display: none;
     position: absolute;
