@@ -10,6 +10,6 @@ id serial not null,
 id_usuario int,
 titulo varchar(30),
 descricao varchar(60),
-midia varchar(60),
+midia varchar(500),
 foreign key (id_usuario) references usuario (id)
 );

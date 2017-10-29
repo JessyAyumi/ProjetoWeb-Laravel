@@ -63,7 +63,8 @@ public class uploadImagem extends HttpServlet {
         writer.println("                          accept-charset=\"utf-8\"");
         writer.println("                          enctype=\"multipart/form-data\">");
         writer.println("            <input type=\"file\" name=\"arquivo\" value=\"\" />");
-        writer.println("            <input type=\"submit\" name=\"enviar\" value=\"submit\" />");
+        writer.println("            <input type=\"submit\" name=\"enviar\" value=\"Enviar\" />");
+        writer.println("            <button><a href=\"login\" style=\"text-decoration:none\">Voltar</a></button>");
         writer.println("        </form>");
         writer.println("<ul>");
         for (int i = 0; i < imagens.size(); i++) {

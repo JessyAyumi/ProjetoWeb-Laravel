@@ -51,7 +51,7 @@ public class controlador extends HttpServlet {
         writer.println("            <a href=\"login\" style=\"text-decoration: none\">Login</a>   ");
         writer.println("           <a href=\"cadastro\" style=\"text-decoration: none\">Cadastrar</a>   ");
         writer.println("            <a>News</a>   ");
-        writer.println("            <a>Partners</a>   ");
+        writer.println("            <a href=\"upload\" style=\"text-decoration: none\">Upload</a>   ");
         writer.println("            <a href=\"logout\" style=\"text-decoration: none\">Sair</a>   ");
         writer.println("            <div class=\"dropdown\">   ");
         writer.println("                <span>EcoSystem</span><span class=\"fa fa-caret-down\" style=\"padding-left: 7%;font-size: 12px\"></span>   ");
