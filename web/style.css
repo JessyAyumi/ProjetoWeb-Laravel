@@ -12,18 +12,18 @@ body {
 }
 .postagens{
     font-family: arial;
-    
+
 }
 
-separador {
+.botao{
     margin-top: 15px;
-    margin-left: 12px;
-    margin-right: 12px;
-    border: 3px;
-    height: 2px;  
-    background-color:#000; 
-    margin-bottom: 0px;
+    align-content: left;
+    font-family: arial;
+    color: black;
+    border: 2px solid black;
 }
+
+
 
 .nav {
     border: 1px solid #dee0df;

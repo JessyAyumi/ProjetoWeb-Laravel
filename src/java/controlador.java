@@ -48,8 +48,8 @@ public class controlador extends HttpServlet {
         writer.println("            <a href=\"#\" class=\"hamburguer\">☰</a>   ");
         writer.println("        </div>   ");
         writer.println("        <div class=\"div-right-menu div-right-align\" style=\"width: 745px;\">   ");
-        writer.println("            <a>Login</a>   ");
-        writer.println("            <a>Cadastrar</a>   ");
+        writer.println("            <a href=\"login\" style=\"text-decoration: none\">Login</a>   ");
+        writer.println("           <a href=\"cadastro\" style=\"text-decoration: none\">Cadastrar</a>   ");
         writer.println("            <a>News</a>   ");
         writer.println("            <a>Partners</a>   ");
         writer.println("            <a href=\"logout\" style=\"text-decoration: none\">Sair</a>   ");
@@ -120,8 +120,11 @@ public class controlador extends HttpServlet {
             System.out.println(e);
 
         }
+        
+        
+        writer.println(" </div>");
+        writer.println("<a href=\"conteudo\" class=\"alinhamento\">Nova Postagem!</a>");
 
-        writer.println(" </div>   ");
         writer.println("</div>");
         writer.println("</body>");
         writer.println("</html>");

@@ -78,7 +78,7 @@ public class login extends HttpServlet {
                 out.println("<div class=\"conteudo\">");
                 out.println("<div class=\"card\">");
                 out.println("<form method=\"post\" action=\"login\" charset=\"utf-8\">");
-                out.println("<input type=\"email\" id=\"email\" name=\"email\" class=\"email\" value=\"" + email + "\" style=\"outline: none;\" required name=email; size=\"25\" pattern=\"[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$\" ></input>");
+                out.println("<input type=\"email\" id=\"email\" name=\"email\" class=\"email\" value=\""+email+"\"  placeholder=\" Insira seu E-mail\" style=\"outline: none;\" required name=email; size=\"25\" pattern=\"[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$\" ></input>");
                 out.println("<input type=\"password\" id=\"senha\" name=\"senha\" class=\"email\" value=\"\"  placeholder=\" Insira sua senha\" required name=password style=\"outline: none;\" charset=\"utf-8\" size=\"25\" ></input>");
                 out.println("<center> <input type=\"submit\" style=\"width:100%;height:auto;\" class=\"botao01\" value=\"Login\"  placeholder=\" \" style=\"outline: none;\" charset=\"utf-8\" ></input></center>");
                 out.println("</form>");
