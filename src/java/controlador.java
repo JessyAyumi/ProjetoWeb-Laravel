@@ -94,20 +94,12 @@ public class controlador extends HttpServlet {
                 + "                    c-3.5,0-7.8-0.7-7.8-2.9V352\"></path>   ");
         writer.println("            </g>   ");
         writer.println("        </svg>   ");
+        writer.println("<div class=\"quadrado\">   ");
+        writer.println("  oi ");
+        writer.println(" </div>   ");
         writer.println("    </div>   ");
         writer.println("    </body/>   ");
         writer.println("</html>   ");
-        writer.println("   ");
-        writer.println("   ");
-        writer.println("   ");
-        writer.println("   ");
-        writer.println("   ");
-        writer.println("   ");
-        writer.println("   ");
-        writer.println("   ");
-        writer.println("   ");
-        writer.println("   ");
-        writer.println("   ");
 
     }
 }
