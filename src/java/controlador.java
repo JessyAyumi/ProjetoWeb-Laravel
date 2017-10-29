@@ -100,6 +100,5 @@ public class controlador extends HttpServlet {
         writer.println("    </div>   ");
         writer.println("    </body/>   ");
         writer.println("</html>   ");
-
     }
 }
