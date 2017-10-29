@@ -1,6 +1,11 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.out;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import static java.time.Clock.system;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -43,16 +48,16 @@ public class controlador extends HttpServlet {
         writer.println("            <a href=\"#\" class=\"hamburguer\">☰</a>   ");
         writer.println("        </div>   ");
         writer.println("        <div class=\"div-right-menu div-right-align\" style=\"width: 745px;\">   ");
-        writer.println("            <a>Documentation</a>   ");
-        writer.println("            <a>Laracasts</a>   ");
+        writer.println("            <a>Login</a>   ");
+        writer.println("            <a>Cadastrar</a>   ");
         writer.println("            <a>News</a>   ");
         writer.println("            <a>Partners</a>   ");
-        writer.println("            <a href=\"logout\">Sair</a>   ");
+        writer.println("            <a href=\"logout\" style=\"text-decoration: none\">Sair</a>   ");
         writer.println("            <div class=\"dropdown\">   ");
         writer.println("                <span>EcoSystem</span><span class=\"fa fa-caret-down\" style=\"padding-left: 7%;font-size: 12px\"></span>   ");
         writer.println("                <div class=\"dropdown-content\">   ");
-        writer.println("                    <p>Envoyer</p>   ");
-        writer.println("                    <p>Lumen</p>   ");
+        writer.println("                    <p>Documentation</p>   ");
+        writer.println("                    <p>News</p>   ");
         writer.println("                    <p>Spark</p>   ");
         writer.println("                    <hr/>   ");
         writer.println("                    <p>Laracon EU</p>   ");
@@ -95,10 +100,32 @@ public class controlador extends HttpServlet {
         writer.println("            </g>   ");
         writer.println("        </svg>   ");
         writer.println("<div class=\"quadrado\">   ");
-        writer.println("  oi ");
+        writer.println("  Suas Postagens ");
+      
+        try {
+            Connection con;
+            ConectDB db = new ConectDB();
+            con = db.getConnection();
+            PreparedStatement ps = con.prepareStatement("SELECT descricao FROM conteudo WHERE id_usuario= " + session.getAttribute("id"));
+            ResultSet rs = ps.executeQuery();
+            System.out.println(session.getAttribute("id"));
+            while (rs.next()) {
+                writer.println("<div class=\"postagens\">   ");
+                writer.println(rs.getString("descricao"));
+                writer.println("</div>");
+                
+            }
+
+        } catch (Exception e) {
+            System.out.println(e);
+
+        }
+
         writer.println(" </div>   ");
-        writer.println("    </div>   ");
-        writer.println("    </body/>   ");
-        writer.println("</html>   ");
+        writer.println("</div>");
+        writer.println("</body>");
+        writer.println("</html>");
+
     }
+
 }
