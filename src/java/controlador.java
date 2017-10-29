@@ -50,7 +50,7 @@ public class controlador extends HttpServlet {
         writer.println("        <div class=\"div-right-menu div-right-align\" style=\"width: 745px;\">   ");
         writer.println("            <a href=\"login\" style=\"text-decoration: none\">Login</a>   ");
         writer.println("           <a href=\"cadastro\" style=\"text-decoration: none\">Cadastrar</a>   ");
-        writer.println("            <a>News</a>   ");
+        writer.println("            <a href=\"controlador\" style=\"text-decoration: none\">News</a>   ");
         writer.println("            <a href=\"upload\" style=\"text-decoration: none\">Upload</a>   ");
         writer.println("            <a href=\"logout\" style=\"text-decoration: none\">Sair</a>   ");
         writer.println("            <div class=\"dropdown\">   ");
@@ -106,7 +106,7 @@ public class controlador extends HttpServlet {
             Connection con;
             ConectDB db = new ConectDB();
             con = db.getConnection();
-            PreparedStatement ps = con.prepareStatement("SELECT descricao FROM conteudo WHERE id_usuario= " + session.getAttribute("id"));
+            PreparedStatement ps = con.prepareStatement("SELECT descricao FROM conteudo WHERE descricao is not null and id_usuario= " + session.getAttribute("id"));
             ResultSet rs = ps.executeQuery();
             System.out.println(session.getAttribute("id"));
             while (rs.next()) {
