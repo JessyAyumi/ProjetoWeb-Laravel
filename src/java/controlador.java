@@ -42,12 +42,14 @@ public class controlador extends HttpServlet {
         writer.println("        <img src=\"img\\laravel.png\" class=\"logo\"><span id=\"laravel\" style=\"color:#e74430; font-size:18px;line-height: 80px;font-family:'Miriam Libre', sans-serif;width:62.5px;height:80px; padding-right:15px; \">Laravel</span>   ");
         writer.println("        <div class=\"div-middle-menu\">   ");
         writer.println("            <img src=\"img\\search.png\" class=\"search-img\" />   ");
+        
         writer.println("            <input type=\"text\" class=\"search-input\" placeholder=\"S E A R C H\" />   ");
         writer.println("        </div>   ");
         writer.println("        <div class=\"div-hamburguer \">   ");
         writer.println("            <a href=\"#\" class=\"hamburguer\">☰</a>   ");
         writer.println("        </div>   ");
         writer.println("        <div class=\"div-right-menu div-right-align\" style=\"width: 745px;\">   ");
+        writer.println("           <a href=\"busca\" style=\"text-decoration: none\">Buscar</a>");
         writer.println("            <a href=\"login\" style=\"text-decoration: none\">Login</a>   ");
         writer.println("           <a href=\"cadastro\" style=\"text-decoration: none\">Cadastrar</a>   ");
         writer.println("            <a href=\"controlador\" style=\"text-decoration: none\">News</a>   ");
