@@ -12,13 +12,13 @@ public class ConectDB {
     public ConectDB() {
         conn            = null;
         String url      = "jdbc:postgresql://localhost/"; // localizacao do servidor
-        String dbName   = "ServletWeb";                    // nome do banco de dados
-       // String dbName   = "laravel";                    // nome do banco de dados
+       // String dbName   = "ServletWeb";                    // nome do banco de dados
+        String dbName   = "laravel";                    // nome do banco de dados
         String driver   = "org.postgresql.Driver";   // nome do driver de conexao
         String userName = "postgres";                    // nome do usuario do banco
 //        String password = "";                    // respectiva senha
-        String password = "admin";                    // respectiva senha
-       // String password = "root";                    // respectiva senha
+       // String password = "admin";                    // respectiva senha
+        String password = "root";                    // respectiva senha
       //  
         try {
             Class.forName(driver);

@@ -66,6 +66,7 @@ public class busca extends HttpServlet {
         writer.println("            <input type=\"text\" name=\"txtBuscar\"/>");
         writer.println("            <input type=\"submit\" name=\"enviar\" value=\"Enviar\" />");
         writer.println("            <button><a href=\"login\" style=\"text-decoration:none\">Voltar</a></button>");
+        writer.println("            <button><a href=\"listaTudo.jsp\" style=\"text-decoration:none\">Listar Tudo</a></button>");
         writer.println("        </form>");
 
         for (int i = 0;
@@ -126,7 +127,7 @@ public class busca extends HttpServlet {
         try {
             String sql = "select c.descricao, u.nome from conteudo c inner join usuario u on (u.id = c.id_usuario) where c.descricao like '%" + palavra + "%'";
   
-            PreparedStatement st = conn.prepareStatement(sql);;
+            PreparedStatement st = conn.prepareStatement(sql);
             ResultSet resultSet = st.executeQuery();
             while (resultSet.next()) {
                 conteudo.add("Usuario: " + 
