@@ -49,7 +49,7 @@ public class controlador extends HttpServlet {
         writer.println("            <a href=\"#\" class=\"hamburguer\">☰</a>   ");
         writer.println("        </div>   ");
         writer.println("        <div class=\"div-right-menu div-right-align\" style=\"width: 745px;\">   ");
-        writer.println("           <a href=\"busca\" style=\"text-decoration: none\">Buscar</a>");
+        writer.println("           <a href=\"listaTudo\" style=\"text-decoration: none\">Buscar</a>");
         writer.println("            <a href=\"login\" style=\"text-decoration: none\">Login</a>   ");
         writer.println("           <a href=\"cadastro\" style=\"text-decoration: none\">Cadastrar</a>   ");
         writer.println("            <a href=\"controlador\" style=\"text-decoration: none\">News</a>   ");
